@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import AppCard from "./components/AppCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div className="container">
+      <h1>APP11</h1>
+
+      <p className="slogan">
+        O lançamento do seu aplicativo começa aqui.
       </p>
-    </>
-  )
+
+      <div className="banner">
+        🚀 Publique seu app gratuitamente por 30 dias
+      </div>
+
+      <p className="sub">
+        Sem Play Store, sem burocracia. Apenas divulgue seu app.
+      </p>
+
+      <div className="grid">
+        <AppCard
+          nome="Seu App Aqui"
+          descricao="Este espaço pode ser do seu aplicativo"
+          imagem="https://via.placeholder.com/150"
+          link="#"
+        />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

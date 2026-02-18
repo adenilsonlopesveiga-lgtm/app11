@@ -1,42 +1,112 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ===== BASE ===== */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0b0f19;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ===== CONTAINER PRINCIPAL ===== */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ===== TÍTULO ===== */
+
+h1 {
+  font-size: 80px;
+  color: #4da6ff;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ===== TEXTOS ===== */
+
+.slogan {
+  font-size: 24px;
+  margin-bottom: 40px;
 }
+
+.sub {
+  opacity: 0.7;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* ===== BANNER ===== */
+
+.banner {
+  display: inline-block;
+  background: #1c2333;
+  padding: 18px 30px;
+  border-radius: 14px;
+  border: 1px solid #4da6ff;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* ===== GRID DE APPS ===== */
+
+.grid {
+  margin-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* ===== CARD DO APP ===== */
 
 .card {
-  padding: 2em;
+  background: #141a29;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.2s;
+  border: 1px solid #1f2a44;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: scale(1.05);
+  border-color: #4da6ff;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ===== BOTÃO ===== */
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #4da6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.card a:hover {
+  background: #2f8cff;
 }
