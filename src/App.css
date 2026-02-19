@@ -2,10 +2,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background: #0b0f19;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -17,8 +13,25 @@ body {
 .container {
   width: 100%;
   max-width: 1100px;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 160px 20px 60px 20px;
 }
+
+
+/* Centralização apenas da Home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home > * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* ===== TÍTULO ===== */
 
@@ -53,15 +66,38 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* ===== BOTÃO PUBLICAR ===== */
+
+.publicar {
+  margin-top: 25px;
+  padding: 16px 28px;
+  font-size: 20px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.publicar:hover {
+  background: #2f8cff;
+  transform: scale(1.05);
+}
+
 /* ===== GRID DE APPS ===== */
 
 .grid {
-  margin-top: 60px;
+  margin-top: 50px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
 }
+
+
 
 /* ===== CARD DO APP ===== */
 
@@ -94,8 +130,6 @@ h1 {
   opacity: 0.8;
 }
 
-/* ===== BOTÃO ===== */
-
 .card a {
   display: inline-block;
   margin-top: 12px;
@@ -109,4 +143,275 @@ h1 {
 
 .card a:hover {
   background: #2f8cff;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+.formContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0b0f19;
+}
+
+.form {
+  background: #141a29;
+  padding: 30px;
+  border-radius: 16px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #1f2a44;
+  background: #0b0f19;
+  color: white;
+}
+
+.form textarea {
+  resize: none;
+  height: 90px;
+}
+
+.form button {
+  padding: 12px;
+  background: #4da6ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #2f8cff;
+}
+
+/* ===== UPLOAD DE ÍCONE ===== */
+
+.upload {
+  background: #0b0f19;
+  border: 1px dashed #4da6ff;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload input {
+  display: none;
+}
+
+.preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 10px auto;
+}
+/* ===== HEADER ===== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0b0f19;
+  border-bottom: 1px solid #1f2a44;
+  padding: 14px 25px;
+  z-index: 10;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logoIcon {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #4da6ff, #2f8cff);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logoText h2 {
+  margin: 0;
+  color: #4da6ff;
+}
+
+.logoText span {
+  font-size: 12px;
+  opacity: 0.6;
+}
+.logoImg {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.logoTitle {
+  margin-left: 12px;
+  color: #4da6ff;
+  font-size: 22px;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+}
+
+
+.logoTitle {
+  margin-left: 12px;
+  color: #4da6ff;
+  font-size: 22px;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+}
+/* ===== LOGO GRANDE CENTRAL ===== */
+
+.heroLogo {
+  width: 260px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0px 12px 30px rgba(77,166,255,0.35));
+}
+.heroLogo {
+  width: 130px;
+  margin-bottom: 20px;
+}
+/* ==== MURAL DE APLICATIVOS ==== */
+
+.grid {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+/* cartão do app */
+
+.card {
+  background: #141a29;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #1f2a44;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #4da6ff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.cardHeader {
+  padding: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 18px;
+}
+
+.appName {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.appDesc {
+  font-size: 14px;
+  opacity: 0.7;
+  min-height: 45px;
+}
+
+.verApp {
+  display: block;
+  margin-top: 14px;
+  padding: 10px;
+  background: #4da6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.verApp:hover {
+  background: #2f8cff;
+}
+/* espaço vazio do jornal */
+
+.slotVazio {
+  background: transparent;
+  border: 2px dashed #4da6ff;
+  border-radius: 16px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.slotVazio:hover {
+  background: rgba(77,166,255,0.08);
+  transform: translateY(-4px);
+}
+
+.slotVazio .mais {
+  font-size: 32px;
+  color: #4da6ff;
+}
+
+.slotVazio p {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+
+.slotVazio:hover {
+  background: rgba(77,166,255,0.08);
+  transform: translateY(-5px);
+}
+
+.slotVazio .mais {
+  font-size: 40px;
+  color: #4da6ff;
+}
+
+.slotVazio p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.7;
 }
